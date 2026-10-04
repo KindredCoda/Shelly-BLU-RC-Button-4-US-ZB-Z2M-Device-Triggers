@@ -1,5 +1,5 @@
 blueprint:
-  name: Shelly BLU RC Button 4 US ZB Z2M (Device Triggers)
+  name: Shelly BLU RC Button 4 US ZB (Z2M Device Triggers)
   description: 
     Home Assistant Blueprint for automating the Shelly BLU RC Button 4 ZB (SBBT-104CUS)
     using Zigbee2MQTT device triggers directly. Avoids relying on event helper entities.
