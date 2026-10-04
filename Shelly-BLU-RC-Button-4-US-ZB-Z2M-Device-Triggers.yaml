@@ -1,0 +1,458 @@
+blueprint:
+  name: Shelly BLU RC Button 4 US ZB Z2M (Device Triggers)
+  description: 
+    Home Assistant Blueprint for automating the Shelly BLU RC Button 4 ZB (SBBT-104CUS)
+    using Zigbee2MQTT device triggers directly. Avoids relying on event helper entities.
+  domain: automation
+  input:
+    remote_device:
+      name: Shelly BLU RC Button 4 Remote
+      description: Select the Zigbee2MQTT device.
+      selector:
+        device:
+          filter:
+            integration: mqtt
+            manufacturer: Shelly
+            model: BLU RC Button 4 ZB
+    
+    # --- BUTTON 1 ACTIONS ---
+    b1_single:
+      name: Button 1 - Single
+      default: []
+      selector:
+        action: {}
+    b1_double:
+      name: Button 1 - Double
+      default: []
+      selector:
+        action: {}
+    b1_triple:
+      name: Button 1 - Triple
+      default: []
+      selector:
+        action: {}
+    b1_single_long:
+      name: Button 1 - Single Long
+      default: []
+      selector:
+        action: {}
+    b1_double_long:
+      name: Button 1 - Double Long
+      default: []
+      selector:
+        action: {}
+    b1_triple_long:
+      name: Button 1 - Triple Long
+      default: []
+      selector:
+        action: {}
+    b1_hold:
+      name: Button 1 - Hold
+      default: []
+      selector:
+        action: {}
+
+    # --- BUTTON 2 ACTIONS ---
+    b2_single:
+      name: Button 2 - Single
+      default: []
+      selector:
+        action: {}
+    b2_double:
+      name: Button 2 - Double
+      default: []
+      selector:
+        action: {}
+    b2_triple:
+      name: Button 2 - Triple
+      default: []
+      selector:
+        action: {}
+    b2_single_long:
+      name: Button 2 - Single Long
+      default: []
+      selector:
+        action: {}
+    b2_double_long:
+      name: Button 2 - Double Long
+      default: []
+      selector:
+        action: {}
+    b2_triple_long:
+      name: Button 2 - Triple Long
+      default: []
+      selector:
+        action: {}
+    b2_hold:
+      name: Button 2 - Hold
+      default: []
+      selector:
+        action: {}
+
+    # --- BUTTON 3 ACTIONS ---
+    b3_single:
+      name: Button 3 - Single
+      default: []
+      selector:
+        action: {}
+    b3_double:
+      name: Button 3 - Double
+      default: []
+      selector:
+        action: {}
+    b3_triple:
+      name: Button 3 - Triple
+      default: []
+      selector:
+        action: {}
+    b3_single_long:
+      name: Button 3 - Single Long
+      default: []
+      selector:
+        action: {}
+    b3_double_long:
+      name: Button 3 - Double Long
+      default: []
+      selector:
+        action: {}
+    b3_triple_long:
+      name: Button 3 - Triple Long
+      default: []
+      selector:
+        action: {}
+    b3_hold:
+      name: Button 3 - Hold
+      default: []
+      selector:
+        action: {}
+
+    # --- BUTTON 4 ACTIONS ---
+    b4_single:
+      name: Button 4 - Single
+      default: []
+      selector:
+        action: {}
+    b4_double:
+      name: Button 4 - Double
+      default: []
+      selector:
+        action: {}
+    b4_triple:
+      name: Button 4 - Triple
+      default: []
+      selector:
+        action: {}
+    b4_single_long:
+      name: Button 4 - Single Long
+      default: []
+      selector:
+        action: {}
+    b4_double_long:
+      name: Button 4 - Double Long
+      default: []
+      selector:
+        action: {}
+    b4_triple_long:
+      name: Button 4 - Triple Long
+      default: []
+      selector:
+        action: {}
+    b4_hold:
+      name: Button 4 - Hold
+      default: []
+      selector:
+        action: {}
+
+mode: restart
+max_exceeded: silent
+
+trigger:
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_single"
+    id: b1_single
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_double"
+    id: b1_double
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_triple"
+    id: b1_triple
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_single_long"
+    id: b1_single_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_double_long"
+    id: b1_double_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_triple_long"
+    id: b1_triple_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "1_hold"
+    id: b1_hold
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_single"
+    id: b2_single
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_double"
+    id: b2_double
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_triple"
+    id: b2_triple
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_single_long"
+    id: b2_single_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_double_long"
+    id: b2_double_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_triple_long"
+    id: b2_triple_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "2_hold"
+    id: b2_hold
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_single"
+    id: b3_single
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_double"
+    id: b3_double
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_triple"
+    id: b3_triple
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_single_long"
+    id: b3_single_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_double_long"
+    id: b3_double_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_triple_long"
+    id: b3_triple_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "3_hold"
+    id: b3_hold
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_single"
+    id: b4_single
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_double"
+    id: b4_double
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_triple"
+    id: b4_triple
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_single_long"
+    id: b4_single_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_double_long"
+    id: b4_double_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_triple_long"
+    id: b4_triple_long
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "4_hold"
+    id: b4_hold
+
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: b1_single
+        sequence: !input b1_single
+      - conditions:
+          - condition: trigger
+            id: b1_double
+        sequence: !input b1_double
+      - conditions:
+          - condition: trigger
+            id: b1_triple
+        sequence: !input b1_triple
+      - conditions:
+          - condition: trigger
+            id: b1_single_long
+        sequence: !input b1_single_long
+      - conditions:
+          - condition: trigger
+            id: b1_double_long
+        sequence: !input b1_double_long
+      - conditions:
+          - condition: trigger
+            id: b1_triple_long
+        sequence: !input b1_triple_long
+      - conditions:
+          - condition: trigger
+            id: b1_hold
+        sequence: !input b1_hold
+
+      - conditions:
+          - condition: trigger
+            id: b2_single
+        sequence: !input b2_single
+      - conditions:
+          - condition: trigger
+            id: b2_double
+        sequence: !input b2_double
+      - conditions:
+          - condition: trigger
+            id: b2_triple
+        sequence: !input b2_triple
+      - conditions:
+          - condition: trigger
+            id: b2_single_long
+        sequence: !input b2_single_long
+      - conditions:
+          - condition: trigger
+            id: b2_double_long
+        sequence: !input b2_double_long
+      - conditions:
+          - condition: trigger
+            id: b2_triple_long
+        sequence: !input b2_triple_long
+      - conditions:
+          - condition: trigger
+            id: b2_hold
+        sequence: !input b2_hold
+
+      - conditions:
+          - condition: trigger
+            id: b3_single
+        sequence: !input b3_single
+      - conditions:
+          - condition: trigger
+            id: b3_double
+        sequence: !input b3_double
+      - conditions:
+          - condition: trigger
+            id: b3_triple
+        sequence: !input b3_triple
+      - conditions:
+          - condition: trigger
+            id: b3_single_long
+        sequence: !input b3_single_long
+      - conditions:
+          - condition: trigger
+            id: b3_double_long
+        sequence: !input b3_double_long
+      - conditions:
+          - condition: trigger
+            id: b3_triple_long
+        sequence: !input b3_triple_long
+      - conditions:
+          - condition: trigger
+            id: b3_hold
+        sequence: !input b3_hold
+
+      - conditions:
+          - condition: trigger
+            id: b4_single
+        sequence: !input b4_single
+      - conditions:
+          - condition: trigger
+            id: b4_double
+        sequence: !input b4_double
+      - conditions:
+          - condition: trigger
+            id: b4_triple
+        sequence: !input b4_triple
+      - conditions:
+          - condition: trigger
+            id: b4_single_long
+        sequence: !input b4_single_long
+      - conditions:
+          - condition: trigger
+            id: b4_double_long
+        sequence: !input b4_double_long
+      - conditions:
+          - condition: trigger
+            id: b4_triple_long
+        sequence: !input b4_triple_long
+      - conditions:
+          - condition: trigger
+            id: b4_hold
+        sequence: !input b4_hold
